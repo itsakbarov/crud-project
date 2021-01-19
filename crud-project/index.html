@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./libs/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/style/main.min.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="card todo-card mt-5">
+    <div class="card-header fw-bold">
+      <p class="d-block m-0 fw-light">Qaydnoma</p>
+      <h4 class="d-flex">
+        Qaydlar soni:
+        <p id="output-order">0</p>
+      </h4>
+    </div>
+    <form id="todo-form" class="p-2 d-flex">
+      <input type="text" class="form-control me-2" id="todo-input">
+      <button type="submit" class="btn btn-primary">Yaratish</button>
+    </form>
+
+    <ul class="list-group list-group-flush" id="todo-list-group">
+    </ul>
+
+    <div class="card-footer">
+      <button type="button" id="todo-save-button" disabled class="btn btn-success" data-bs-toggle="modal"
+        data-bs-target="#todoModal">Save</button>
+    </div>
+  </div>
+
+  <div class="modal fade" id="todoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Royihat:</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="todo-modal-body">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+    <div class="toast-header bg-gradient">
+      <strong class="me-auto">Text not found</strong>
+      <small>error</small>
+      <button type="button" class="btn-close btn-close-toast" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body bg-danger text-white">
+      Iltimos inputga qandaydir qiymat bering keyin ishlidi!
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+  <script src="./libs/bootstrap.min.js"></script>
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- 
+  1. ToDo list ishlashini o’rganib kelish
+2. Save tugmasi royhatda element bo’lmasa, ishlamasligini ta’minlash
+3. Elementlar o’chirilganda modal oynasidan o’chirish funksiyasini yozish
+4. Input bo’sh bo’lganda, royhatda element yaralmaslik mantig’ini yozish
+ -->
