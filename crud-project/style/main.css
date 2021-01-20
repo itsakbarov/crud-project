@@ -27,3 +27,20 @@ body {
 .toast.show {
   z-index: 9999888888888;
 }
+
+.todo-input:disabled {
+  border: none;
+  background: none;
+}
+
+.todo-input:ocus {
+  border: none;
+  background: none;
+}
+
+.todo-input {
+  border: none;
+  border-bottom: 3px solid #3979d8;
+  outline: none;
+  color: #000;
+}
